@@ -14,6 +14,7 @@ const initialState = {
       case REMOVE_CITY: // bug si la ville pas dans le state : retire la derniere ville 
         nextState = {...state};
         nextState.cities.splice(nextState.cities.indexOf(action.payload),1);
+        nextState.cities = [...nextState.cities] // needed to trigger rerender in component
         return nextState;
       default: 
         return state;

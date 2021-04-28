@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import { createPortal } from 'react-dom'
 
 import Card from 'react-bootstrap/Card'
 import '../font/weather-icons.min.css'
