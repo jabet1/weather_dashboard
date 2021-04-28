@@ -2,7 +2,7 @@ import { ADD_CITY, REMOVE_CITY } from "../constants/action-types";
 
 
 const initialState = {
-    cities: ['London', 'Paris', 'Berlin']
+    cities: ['London', 'Paris', 'Berlin', 'Shanghai']
   };
   
   function reducer(state = initialState, action) {

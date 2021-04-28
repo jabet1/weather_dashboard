@@ -9,6 +9,8 @@ import App from './App';
 import reducer from './reducers/reducer.js'
 import reportWebVitals from './reportWebVitals';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const store = createStore(reducer)
 
 ReactDOM.render(

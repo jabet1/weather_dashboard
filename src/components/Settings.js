@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { addCity, removeCity } from "../actions/actions";
+import Button from 'react-bootstrap/Button';
 
 
 class Settings extends Component {
@@ -15,8 +16,8 @@ class Settings extends Component {
     return (
       <div className="Settings">
         {'settings'}
-        <button onClick={() => this.removeCity('Paris')}>bye</button>
-        <button onClick={() => this.addCity('Paris')}>SALUT</button>
+        <Button onClick={() => this.removeCity('Paris')}>bye</Button>
+        <Button onClick={() => this.addCity('Paris')}>SALUT</Button>
 
       </div>
     );

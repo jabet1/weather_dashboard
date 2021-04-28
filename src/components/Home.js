@@ -13,13 +13,15 @@ class Home extends Component {
   
   render() {
     return (
-      <div className="Home">
-        {this.state.cities.map((city) => (
-          <Widget
-            cityName = {city}
-            key = {city}
-          /> )
-        )}
+      <div className="container">
+        <div className="row">
+          {this.state.cities.map((city) => (
+            <Widget
+              cityName = {city}
+              key = {city}
+            /> )
+          )}
+        </div>
       </div>
     );
   }

@@ -17,10 +17,8 @@ class App extends Component {
             <div>
               <h2>Weather DashBoard</h2>
               <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <ul className="navbar-nav mr-auto">
-                <li><Link to={'/'} className="nav-link"> Home </Link></li>
-                <li><Link to={'/settings'} className="nav-link">Settings</Link></li>
-              </ul>
+                  <Link to={'/'} className="nav-link col-sm"> Home </Link>
+                  <Link to={'/settings'} className="nav-link col-sm">Settings</Link>
               </nav>
               <hr />
               <Switch>
