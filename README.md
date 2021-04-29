@@ -5,13 +5,13 @@
 
 - Two pages : 
 	- 'Home' with the all the widgets, 
-	- 'Settings' where we can 'add' and 'remove' widget
-- Each widget display at least :
+	- 'Settings' where we can 'add' and 'remove' widgets
+- Each widget displays at least :
 	- Name of the city
 	- Current temperature in Celsius
 	- An icon of the weather
-- Use [OpenWeatherMap API](https://openweathermap.org/api)
-- Use [erikflowers weather icons](https://erikflowers.github.io/weather-icons/) 
+- Uses [OpenWeatherMap API](https://openweathermap.org/api)
+- Uses [erikflowers weather icons](https://erikflowers.github.io/weather-icons/) 
 
 Done in 1.5 days
 
@@ -23,7 +23,7 @@ Done in 1.5 days
 
 ## How to install the project
 
- 1. Clone reposetery
+ 1. Clone repository
  2. Install node modules with `npm install`
  3. Create a .env file at the root of the project then add your api key for OpenWeatherMap in it : `REACT_APP_WEATHER_API_KEY=yourApiKey`
  4. To launch react : `npm start`  
