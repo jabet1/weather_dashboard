@@ -27,11 +27,11 @@ class Settings extends Component {
     if(/^[a-zA-Z]*$/.test(value) && !this.props.cities.includes(value) && value.length > 0 ){
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`) //check if city is in Open Weather Map database
       .then(res => {
-        if( !res.ok ){
+        if( !res.ok ){ //open weather map return error
           this.setState({cityNotInDBError: true});
-        } else {
+        } else { // city is in open weather database
           this.props.dispatch(addCity(value));
-          this.setState({ formValue : '', formError: false, cityNotInDBError: false, cityDoubleError:false });  
+          this.setState({ formValue : '', formError: false, cityNotInDBError: false, cityDoubleError:false }); // reset the form error + value
         }
       })
       .then(
@@ -39,7 +39,7 @@ class Settings extends Component {
           console.log(error);
         }
       )
-    }else if(this.props.cities.includes(value)){
+    }else if(this.props.cities.includes(value)){ 
       this.setState({cityDoubleError: true});
       
     }else{
@@ -49,7 +49,7 @@ class Settings extends Component {
 
   handleChange = (e) => {
     if(/^[a-zA-Z]*$/.test(e.target.value && e.target.value.length > 0)){
-      this.setState({ formValue: e.target.value, formError: false, cityNotInDBError: false, cityDoubleError: false });
+      this.setState({ formValue: e.target.value, formError: false, cityNotInDBError: false, cityDoubleError: false }); //reset form error
     }else{
       this.setState({ formValue: e.target.value, formError: true });
     }
@@ -58,7 +58,7 @@ class Settings extends Component {
   render() {
     return (
       <div className="container mt-4">
-        <Form className=" row" onSubmit={this.handleSubmit}>
+        <Form className=" row mr-1 ml-1" onSubmit={this.handleSubmit}>
           <Form.Control 
             type="text" 
             className="form-control col-10" 
@@ -77,7 +77,7 @@ class Settings extends Component {
             <tr>
               <th style={{width:'10%'}}>#</th>
               <th style={{width:'80%'}}>City Name</th>
-              <th style={{width:'10%'}}>Delete</th>
+              <th style={{width:'10%'}}>Remove</th>
             </tr>
           </thead>
           <tbody>
@@ -96,15 +96,14 @@ class Settings extends Component {
               </tr>
             )}
           </tbody>
-        </Table>
- 
+        </Table> 
       </div>
     );
   }
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { 
   return {cities: state.cities}
 }
 

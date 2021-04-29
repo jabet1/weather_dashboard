@@ -5,16 +5,12 @@ import { connect } from "react-redux";
 import Widget from './Widget.js'
 
 class Home extends Component {
-  
-  state = {
-    cities : this.props.cities
-  }
-  
+ 
   render() {
     return (
       <div className="container">
         <div className="row">
-          {this.state.cities.map((city) => (
+          {this.props.cities.map((city) => (
             <Widget
               cityName = {city}
               key = {city}
@@ -26,7 +22,7 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { //redux : link global stat to props
   return {cities: state.cities}
 }
 

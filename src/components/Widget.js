@@ -27,7 +27,7 @@ class Widget extends Component {
                 let minutes = date.getUTCMinutes();
                 hour = hour >= 0 ? hour : hour + 24;
                 hour = hour < 10 ? '0' + hour : hour;
-                minutes = minutes < 10 ? '0'+ minutes : minutes;
+                minutes = minutes < 10 ? '0'+ minutes : minutes; // case when minutes is only one number and give hour:x when we want hour:xx
                 this.cityCountry = country;
                 this.setState({
                     temperature: temp,
@@ -36,26 +36,26 @@ class Widget extends Component {
                 });
             },
             (error) => { 
-              console.log(error)
+              console.log(error);
             }
           )
       }
 
     render(){
         return(
-          <div className="col-md-6 pt-2 ">
+          <div id="widget" className="col-md-6 pt-2 ">
             <Card >
               <div className="row">
                 <div className="col-md-8 col-6 my-auto"> 
-                  <div className="col-sm-12 ">
+                  <div id="cityNameContainer" className="col-sm-12 ">
                     {`${this.cityName},${this.cityCountry}`}
                   </div>
-                  <div className="row">
-                    <div className="col-md-6">
+                  <div id="tempTimeContainer" className="row">
+                    <div id="tempContainer" className="col-md-6">
                       <i className="wi wi-thermometer"></i>
                       {` ${this.state.temperature}°c `}                      
                     </div>
-                    <div className="col-md-6">
+                    <div id="timeContainer" className="col-md-6">
                       <i className="wi wi-time-1"></i>
                       {` ${this.state.time} `}
                     </div>
