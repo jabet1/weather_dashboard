@@ -4,14 +4,14 @@
   Technical test conducted for a job interview with these specifications :
 
 - Two pages : 
-		- 'Home' with the all the widgets, 
-		- 'Settings' where we can 'add' and 'remove' widget
+	- 'Home' with the all the widgets, 
+	- 'Settings' where we can 'add' and 'remove' widget
 - Each widget display at least :
-		- Name of the city
-		- Current temperature in Celsius
-		- An icon of the weather
+	- Name of the city
+	- Current temperature in Celsius
+	- An icon of the weather
 - Use [OpenWeatherMap API](https://openweathermap.org/api)
-- Use [erikflower weather icons](https://erikflowers.github.io/weather-icons/) 
+- Use [erikflowers weather icons](https://erikflowers.github.io/weather-icons/) 
 
 Done in 1.5 days
 
